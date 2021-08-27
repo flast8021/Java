@@ -1,0 +1,58 @@
+import java.util.Scanner;
+/**
+ * This progame asks for blood type and in return ask you for blood donating/recieving option about specific blood type entered.
+ * @author (Usman Zia)
+ * @date (27-08-2021)
+ */
+public class Clinic {
+    public static void main(String[] args) {
+       Scanner kb=new Scanner(System.in);
+       //Variable for donating/reciving choice
+       String choice;
+       //Calling personal class.
+       Personal firstName = new Personal();
+       firstName.getFirstName();
+       String name1= kb.nextLine();
+       Personal lastName = new Personal();
+       lastName.getLastName();
+       String name2= kb.nextLine();
+       //Declaging name variable to gather 1st and 2nd name.
+       String name = name1+" "+name2;
+       //Print and Input for donating/recieving choice
+       System.out.println("Know more about blood reciving/donating?(1 for donating, 2 for Receiving):");
+       choice=kb.nextLine();
+       //Start of while loop with stated conditions.
+           while(choice.equals("1") || choice.equals("2") || (!choice.equals("2"))||(!choice.equals("1"))){
+               //Start of if/else statment.
+               if(choice.equals("1")){
+                   //printing name and relative info.
+                   System.out.println(name+" Please Provide your Blood Type (A+,O+,B+,AB+,A-,O-,B-,AB-)\nNote:Make sure to use CAPITAL LETTER and correct SIGN ORDER.");
+                   System.out.println("\t-----\t-----\t-----\t-----\t-----");
+                   //Calling method of donorClinic(class) for doing the relating job for us. 
+                   //Personal show = new Personal();
+                   //show.display();
+                   donorClinic donorCall = new donorClinic();
+                   donorCall.donor(kb.nextLine());
+                   //On correct Entry breaking the while loop.
+                   break;
+               }else if(choice.equals("2")){
+                   //printing name and relative info.
+                   System.out.println(name+" Please Provide your Blood Type (A+,O+,B+,AB+,A-,O-,B-,AB-)\nNote:Make sure to use CAPITAL LETTER and correct SIGN ORDER.");
+                   System.out.println("\t-----\t-----\t-----\t-----\t-----");
+                   //Calling method of recipentClinic(class) for doing the relating job for us
+                   recipentClinic recipentCall = new recipentClinic();
+                   recipentCall.recipent(kb.nextLine());
+                   //On correct Entry breaking the while loop.
+                   break;
+               }else if((!choice.equals("2")) || (!choice.equals("1"))){
+                   //printing name and relative info on wrong entries.
+                   System.out.println(" Choice doesn't exist ,Please try again");
+                   System.out.println(name+"Please choose between 1 for donating OR 2 for recieving.");
+                   System.out.println("\t-----\t-----\t-----\t-----\t-----");
+                   //keyboard for giving them chance to input correct choice.
+                   choice=kb.nextLine();
+                   //not breaking loop due to invalid entry and i dont want loop to break on wrong entry.
+               }// end of if/else condition
+           }// end of while loop
+    }
+}
