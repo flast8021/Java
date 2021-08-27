@@ -1,0 +1,25 @@
+# bloodTestClinic
+Create classes for the blood clinic, donor and receiver with appropriate methods.
+Asking a user to input first name, last name and if she/he is a donor or receiver. 
+Depending on the choice, creating new donor or receiver object. 
+Then the program prints out the blood type that she/he can receive or give (blood types that a donor can give to; blood types that a receiver can receive). 
+
+
+Example
+
+Enter Patient's 1st Name: Mark
+Enter Patient's 2nd Name: Jones
+
+Mark Jones Know more about blood reciving/donating?(1 for donating, 2 for Receiving):3
+Choice doesn't exist ,Please try again
+Mark Jones Please choose between 1 for donating OR 2 for recieving.
+	-----	-----	-----	-----	-----
+2
+
+Mark Jones Please Provide your Blood Type (A+,O+,B+,AB+,A-,O-,B-,AB-)
+Note:Make sure to use CAPITAL LETTER and correct SIGN ORDER.
+	-----	-----	-----	-----	-----
+A-
+You can recieve blood from (A-,O-)
+
+End of programe.
