@@ -1,0 +1,45 @@
+/**
+ * Class of Clinic Programe.
+ * @author (Usman Zia)
+ * @date (27-08-2021)
+ */
+public class personal
+{
+    //attributes for our personal class.
+    private String firstName;
+    private String lastName;
+    private String bloodType;
+    //setter for first name.
+    public void setFirstName(String firstName)
+    {
+        this.firstName=firstName;
+    }
+    //setter for first name.
+    public void setLastName(String lastName)
+    {
+        this.lastName=lastName;
+    }
+    //setter for bloodType.
+    public void setBloodType(String bloodType)
+    {
+        this.bloodType=bloodType;
+    }
+    //getter for first name.
+    public String getFirstName(){
+        return this.firstName;
+    }
+    //getter for last name.
+    public String getLastName(){
+        return this.lastName;
+    }
+    //getter for bloodType.
+    public String getBloodType(){
+        return this.bloodType;
+    }
+    //full name method.
+    public String fullName()
+    {
+        String fullName=firstName+" "+lastName;
+        return fullName;
+    }
+}
