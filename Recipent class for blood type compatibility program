@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class donorClinic{
+    public String donor(String bloodType){
+        Scanner kb = new Scanner (System.in);
+        //start of while loop.
+            while(true){
+                //setting conditions for donating catagories.
+                if(bloodType.equals("A+")) {
+                    System.out.println("You Can Donate blood to (A+,AB+)");  
+                    break;
+                }else if(bloodType.equals("O+")) {
+                    System.out.println("You Can Donate blood to (A+,AB+,B+,O+)"); 
+                    break;
+                }else if(bloodType.equals("B+")) {
+                    System.out.println("You Can Donate blood to (AB+,B+)");  
+                    break;
+                }else if(bloodType.equals("AB+")) {
+                    System.out.println("You Can Donate blood to (AB+ Only)");  
+                    break;
+                }else if(bloodType.equals("A-")) {
+                    System.out.println("You Can Donate blood to (A-,A+,AB-,AB+)");  
+                    break;
+                }else if(bloodType.equals("O-")) {
+                    System.out.println("You Can Donate blood to (EveryOne )");
+                    break;
+                }else if(bloodType.equals("B-")) {
+                    System.out.println("You Can Donate blood to (B-,B+,AB-,AB+)"); 
+                    break;
+                }else if(bloodType.equals("AB-")) {
+                    System.out.println("You Can Donate blood to (B-,B+,AB-,AB+)"); 
+                    break;
+                }else{
+                    System.out.println("Please Provide your *Correct* Blood Type (A+,O+,B+,AB+,A-,O-,B-,AB-)");
+                    System.out.println("Note:Make sure to use CAPITAL LETTER and correct SIGN ORDER.");
+                    System.out.println("\t-----\t-----\t-----\t-----\t-----");
+                    bloodType=kb.nextLine();   
+                }
+            }//end of while loop.
+        return bloodType;
+    }
+}
